@@ -4,7 +4,8 @@ from sklearn.ensemble import ExtraTreesRegressor
 from sklearn.model_selection import train_test_split
 import pickle
 
-df = pd.read_csv('Flight_Trained.csv')
+df_Encoded = pd.read_csv('Flight_Trained.csv')
+df_Encoded.drop('Unnamed: 0',axis=1,inplace=True)
 
 X = df_Encoded.drop('Price',axis=1)
 y = df_Encoded['Price']
